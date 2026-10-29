@@ -1,14 +1,19 @@
 {
-  "name": "otgw",
+  "name": "xiaoshley-birthday-evite",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.9",
     "firebase": "^13.1.0",
     "next": "^16.4.3",
     "react": "19.1.0",
@@ -22,7 +27,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.155.0"
   },
   "overrides": {
     "@grpc/grpc-js": "^1.14.6"
@@ -30,6 +36,9 @@
   "allowScripts": {
     "@firebase/util@1.15.3": true,
     "protobufjs@7.6.6": true,
-    "unrs-resolver@1.11.1": true
+    "unrs-resolver@1.11.1": true,
+    "fsevents@2.3.3": true,
+    "workerd@1.20261023.1": true,
+    "esbuild@0.28.2": true
   }
 }

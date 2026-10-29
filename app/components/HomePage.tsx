@@ -89,25 +89,25 @@ export default function HomePage() {
           <h3>Where?</h3>
           4019 29 St, Queens NY
           <h3>When?</h3>
-          Saturday, Nov 14, starting at 8pm!! You are welcome to sleep over if
-          it gets late!!
+          Saturday, Nov 14, starting at 8pm. You are welcome to sleep over if it
+          gets late!
         </div>
 
         <div className={styles.description}>
           <h3>Why a joint party?</h3>
           Ashley&apos;s birthday is on November 12th and Xiaoxue&apos;s birthday
-          is on November 15th. Ashley felt a little too shy to throw a party
-          solo and Xiaoxue had the generous idea of doing one together.
-          Friendship is so magical!!!
+          is on November 15th. Ashley felt a little shy to throw a party solo
+          and Xiaoxue had the generous idea of doing one together. Friendship is
+          so magical!!!
           <br></br>
           <br></br>
           Several amazing college friends are visiting and booked a house in
           LIC. So we are having the party there!
           <br></br>
           <br></br>
-          Thanks to Marcos for making the original version of this evite website
-          and putting the code online, Anas for giving us the idea to steal it,
-          and Kelly for the epic poster design!!
+          SHOUTOUT Marcos from whom we stole the website code,
+          Anas/Connor/Qashka for giving us the idea to steal it, and Kelly for
+          the epic poster design!!
         </div>
         <div className={styles.bring}>
           <h3>Should I bring a gift?</h3>

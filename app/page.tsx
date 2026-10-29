@@ -89,16 +89,16 @@ export default function Home() {
           <h3>Where?</h3>
           4019 29 St, Queens NY
           <h3>When?</h3>
-          Starting 8pm on Saturday, Nov 14. You are welcome to sleep over if it
-          gets late!!
+          Saturday, Nov 14, starting at 8pm!! You are welcome to sleep over if
+          it gets late!!
         </div>
 
         <div className={styles.description}>
           <h3>Why a joint party?</h3>
-          Ashley's birthday is on November 12th and Xiaoxue's birthday is on
-          November 15th. Ashley felt a little too shy to throw a party solo and
-          Xiaoxue had the generous idea of doing one together. Friendship is so
-          magical!!!
+          Ashley&apos;s birthday is on November 12th and Xiaoxue&apos;s birthday
+          is on November 15th. Ashley felt a little too shy to throw a party
+          solo and Xiaoxue had the generous idea of doing one together.
+          Friendship is so magical!!!
           <br></br>
           <br></br>
           Several amazing college friends are visiting and booked a house in
@@ -111,8 +111,8 @@ export default function Home() {
         </div>
         <div className={styles.bring}>
           <h3>Should I bring a gift?</h3>
-          Don't buy us any gifts!!! But we would accept a nice little card or
-          donations (like $5 or so?) to cover the house cost for our visiting
+          Don&apos;t buy us any gifts!!! But we would accept little cards or a
+          donation (like $5 or so?) to cover the house cost for our visiting
           friends.
         </div>
         <div className={styles.attendees}>
@@ -148,7 +148,7 @@ export default function Home() {
           <h3>Poop</h3>
           <div>Poop as {nameForPooper}:</div>
           <button onClick={poopCallback} className={styles.poopImageButton}>
-            <Image src="/poop.png" width="50" height="50" alt="poop" />
+            <Image src="/doot.png" width="50" height="50" alt="poop" />
           </button>
           <div className={styles.poopLog}>
             <ShowWhenReady

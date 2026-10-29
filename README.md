@@ -1,1 +1,1 @@
-# E-vite for OTGW watch party
+# E-vite for joint bday party

@@ -78,7 +78,7 @@ export default function HomePage() {
           Joint Bday Party
         </div>
         <Image
-          src="/invite2.png"
+          src="/invite.png"
           width="500"
           height="500"
           alt="PUMPKIN KING"

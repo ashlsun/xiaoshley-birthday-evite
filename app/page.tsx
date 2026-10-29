@@ -4,8 +4,8 @@ import Image from "next/image";
 import styles from "./app.module.css";
 import { getFirestore, collection } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { firebaseApp, logDoot, register } from "./db";
-import { Attendee, Doot } from "./interfaces";
+import { firebaseApp, logPoop, register } from "./db";
+import { Attendee, Poop } from "./interfaces";
 import { useState, useEffect } from "react";
 import { formatTime, getLeaderboard } from "./util";
 import ShowWhenReady from "./components/ShowWhenReady";
@@ -32,32 +32,32 @@ export default function Home() {
     collection(getFirestore(firebaseApp), "attendees"),
     {
       snapshotListenOptions: { includeMetadataChanges: true },
-    }
+    },
   );
-  const [dootsCollection, dootsLoading, dootsError] = useCollection(
-    collection(getFirestore(firebaseApp), "doots"),
+  const [poopsCollection, poopsLoading, poopsError] = useCollection(
+    collection(getFirestore(firebaseApp), "poops"),
     {
       snapshotListenOptions: { includeMetadataChanges: true },
-    }
+    },
   );
 
   const attendees = attendeesCollection?.docs.map(
-    (doc) => doc.data() as Attendee
+    (doc) => doc.data() as Attendee,
   );
-  const doots = dootsCollection?.docs
-    .map((doc) => doc.data() as Doot)
+  const poops = poopsCollection?.docs
+    .map((doc) => doc.data() as Poop)
     .toSorted((a, b) => a.timestamp - b.timestamp);
 
   const attendeeNamesSet = [
     ...new Set(attendees?.map((attendee) => attendee.name)),
   ];
 
-  const loading = attendeesLoading || dootsLoading;
-  const error = attendeesError || dootsError;
+  const loading = attendeesLoading || poopsLoading;
+  const error = attendeesError || poopsError;
 
-  const nameForDooter = name.length > 0 ? name : "anonymous";
+  const nameForPooper = name.length > 0 ? name : "anonymous";
 
-  const leaderboard = doots && getLeaderboard(doots);
+  const leaderboard = poops && getLeaderboard(poops);
 
   const registerCallback = () => {
     if (name.length > 0) {
@@ -65,44 +65,55 @@ export default function Home() {
     }
   };
 
-  const dootCallback = () => {
-    logDoot(nameForDooter, name.length === 0);
+  const poopCallback = () => {
+    logPoop(nameForPooper, name.length === 0);
   };
 
   return (
     <div className={styles.appContainer}>
       <div className={styles.innerContainer}>
         <div className={styles.titleContainer}>
-          Over the Garden Wall
+          Xiaoxue and Ashley
           <br />
-          Watch Party
+          Joint Bday Party
         </div>
         <Image
-          src="/pumpkin-king.gif"
+          src="/invite2.png"
           width="500"
           height="500"
           alt="PUMPKIN KING"
           className={styles.headerGif}
         />
-        <div className={styles.description}>
-          <h3>What&apos;s this?</h3>
-          <i>Over the Garden Wall</i> is a ten-episode miniseries that aired on
-          Cartoon Network in 2014. It&apos;s filled with stunning artwork,
-          evocative music, and the strongest autumn vibes ever recorded.
-        </div>
+
         <div className={styles.details}>
-          <h3>Where and when?</h3>
-          Come to our residence at 332 Rogers Ave on <b>
-            Sunday, October 26th
-          </b>{" "}
-          at <b>5:00 PM</b> to begin watching! The whole miniseries is about the
-          length of a movie (~2 hours). Once you arrive, feel free to buzz 062#
-          or just call me.
+          <h3>Where?</h3>
+          4019 29 St, Queens NY
+          <h3>When?</h3>
+          Starting 8pm on Saturday, Nov 14. You are welcome to sleep over if it
+          gets late!!
+        </div>
+
+        <div className={styles.description}>
+          <h3>Why a joint party?</h3>
+          Ashley's birthday is on November 12th and Xiaoxue's birthday is on
+          November 15th. Ashley felt a little too shy to throw a party solo and
+          Xiaoxue had the generous idea of doing one together. Friendship is so
+          magical!!!
+          <br></br>
+          <br></br>
+          Several amazing college friends are visiting and booked a house in
+          LIC. So we are having the party there!
+          <br></br>
+          <br></br>
+          Thanks to Marcos for making the original version of this evite website
+          and putting the code online, Anas for giving us the idea to steal it,
+          and Kelly for the epic poster design!!
         </div>
         <div className={styles.bring}>
-          <h3>What should I bring?</h3>
-          Nothing required, but fall snacks are more than welcome! I&apos;ll
-          also be preparing some hard spiced apple cider for all to enjoy.
+          <h3>Should I bring a gift?</h3>
+          Don't buy us any gifts!!! But we would accept a nice little card or
+          donations (like $5 or so?) to cover the house cost for our visiting
+          friends.
         </div>
         <div className={styles.attendees}>
           <h3>Who&apos;s going?</h3>
@@ -133,49 +144,44 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className={styles.dootContainer}>
-          <h3>Doot</h3>
-          <div>Doot as {nameForDooter}:</div>
-          <button onClick={dootCallback} className={styles.dootImageButton}>
-            <Image src="/doot.png" width="50" height="50" alt="doot" />
+        <div className={styles.poopContainer}>
+          <h3>Poop</h3>
+          <div>Poop as {nameForPooper}:</div>
+          <button onClick={poopCallback} className={styles.poopImageButton}>
+            <Image src="/poop.png" width="50" height="50" alt="poop" />
           </button>
-          <div className={styles.dootLog}>
+          <div className={styles.poopLog}>
             <ShowWhenReady
               loading={loading}
               error={Boolean(error)}
-              errorMessage="couldn't fetch doots!"
+              errorMessage="couldn't fetch poops!"
             >
               <ul>
-                {doots?.toReversed().map((doot) => (
-                  <li key={`${doot.dooter}:${doot.timestamp}`}>
-                    {doot.dooter} dooted at {formatTime(doot.timestamp)}
+                {poops?.toReversed().map((poop) => (
+                  <li key={`${poop.pooper}:${poop.timestamp}`}>
+                    {poop.pooper} pooped at {formatTime(poop.timestamp)}
                   </li>
                 ))}
               </ul>
             </ShowWhenReady>
           </div>
-          <div className={styles.topDooters}>
-            <h3>Top dooters</h3>
-            <div className={styles.dootLeaderboard}>
+          <div className={styles.topPoopers}>
+            <h3>Top Poopers</h3>
+            <div className={styles.poopLeaderboard}>
               <ShowWhenReady
                 loading={loading}
                 error={Boolean(error)}
                 errorMessage="couldn't fetch leaderboard!"
               >
                 <ol>
-                  {leaderboard?.slice(0, 10).map(([name, doots]) => (
+                  {leaderboard?.slice(0, 10).map(([name, poops]) => (
                     <li key={name}>
-                      {name} ({doots} {doots === 1 ? "doot" : "doots"})
+                      {name} ({poops} {poops === 1 ? "poop" : "poops"})
                     </li>
                   ))}
                 </ol>
               </ShowWhenReady>
             </div>
-          </div>
-          <div className={styles.why}>
-            <h3>Why did you make a website for this?</h3>
-            Because I thought it was a fun idea and my capacity for
-            prioritization is limited.
           </div>
         </div>
       </div>

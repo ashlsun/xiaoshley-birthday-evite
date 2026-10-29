@@ -14,8 +14,8 @@ const karla = Karla({
 });
 
 export const metadata: Metadata = {
-  title: "Over the Garden Wall e-vite",
-  description: "We're here to burgle yer turts!",
+  title: "Xiaoshley bday e-vite",
+  description: "We poopin!",
 };
 
 export default function RootLayout({

@@ -1,13 +1,13 @@
-import { Doot } from "./interfaces";
+import { Poop } from "./interfaces";
 
-export const getLeaderboard = (doots: Doot[]) => {
+export const getLeaderboard = (poops: Poop[]) => {
   const counts: Record<string, number> = {};
-  doots.forEach((doot) => {
-    if (!doot.ignoreInLeaderboard) {
-      if (Object.keys(counts).includes(doot.dooter)) {
-        counts[doot.dooter]++;
+  poops.forEach((poop) => {
+    if (!poop.ignoreInLeaderboard) {
+      if (Object.keys(counts).includes(poop.pooper)) {
+        counts[poop.pooper]++;
       } else {
-        counts[doot.dooter] = 1;
+        counts[poop.pooper] = 1;
       }
     }
   });

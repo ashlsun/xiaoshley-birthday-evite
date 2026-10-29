@@ -3,8 +3,8 @@ export interface Attendee {
   timestamp: number;
 }
 
-export interface Doot {
-  dooter: string;
+export interface Poop {
+  pooper: string;
   timestamp: number;
   ignoreInLeaderboard?: boolean;
 }

@@ -1,8 +1,8 @@
 :root {
-  --background: #1f1d1d;
-  --foreground: #e5cfbe;
+  --background: #eaf0dc;
+  --foreground: #302e3c;
   --gray: #89837e;
-  --accent: #d8721f;
+  --accent: #22903f;
   --red: #ee4a13;
 }
 
@@ -31,6 +31,7 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 30px;
 }

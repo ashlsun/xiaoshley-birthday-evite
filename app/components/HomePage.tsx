@@ -78,10 +78,10 @@ export default function HomePage() {
           Joint Bday Party
         </div>
         <Image
-          src="/invite.png"
+          src="/invite4.png"
           width="500"
           height="500"
-          alt="PUMPKIN KING"
+          alt="Poster for birthday party at the intersection of Xiaoxue and Ashley"
           className={styles.headerGif}
         />
 
@@ -111,9 +111,9 @@ export default function HomePage() {
         </div>
         <div className={styles.bring}>
           <h3>Should I bring a gift?</h3>
-          Don&apos;t buy us any gifts!!! But we would accept little cards or a
-          donation (like $5 or so?) to cover the house cost for our visiting
-          friends.
+          Don&apos;t buy us any gifts!!! But we would welcome donations to help
+          cover the house cost for our visiting friends. Cards also very
+          appreciated!
         </div>
         <div className={styles.attendees}>
           <h3>Who&apos;s going?</h3>

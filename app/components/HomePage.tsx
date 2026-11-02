@@ -113,8 +113,8 @@ export default function HomePage() {
           <h3>Should I bring a gift?</h3>
           Don&apos;t buy us any gifts!!! But we would welcome donations to help
           cover the house cost for our visiting friends (We'll put up a qr code
-          at the house! Zelle 9082008977 or Venmo AshleySun00). Cards also very
-          appreciated!
+          at the house. Or you can Zelle 9082008977 or Venmo AshleySun00). Cards
+          also very appreciated!
         </div>
         <div className={styles.attendees}>
           <h3>Who&apos;s going?</h3>

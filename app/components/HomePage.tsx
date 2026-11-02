@@ -283,11 +283,11 @@ export default function HomePage() {
           <h3>Should I bring a gift?</h3>
           Don&apos;t buy us any gifts!!! But we would welcome donations to help
           cover the house cost for our visiting friends (We&apos;ll put up a qr
-          code at the house. Or you can Zelle 9082008977 or Venmo AshleySun00).
-          Cards also very appreciated!
+          code at the house. Or you can Zelle 9082008977 or Venmo
+          Xiaoxue-Resek). Cards also very appreciated!
         </div>
         <div className={styles.attendees}>
-          <h3>Who&apos;s going?</h3>
+          <h3>Who&apos;s in the house of friendship?</h3>
           <ShowWhenReady
             loading={loading}
             error={Boolean(error)}
@@ -295,7 +295,9 @@ export default function HomePage() {
           >
             <ul>
               {attendeeNamesSet.map((attendeeName) => (
-                <li key={attendeeName}>{attendeeName} is going!</li>
+                <li key={attendeeName}>
+                  <b>{attendeeName}</b> is in the house of friendship!
+                </li>
               ))}
             </ul>
           </ShowWhenReady>
@@ -342,7 +344,7 @@ export default function HomePage() {
                       : describePoopBurst(event.count);
                     return (
                       <li key={`poop:${event.pooper}:${event.timestamp}`}>
-                        {event.count > 10 ? "🍀" : "☘️"} {event.pooper}{" "}
+                        {event.count > 10 ? "🍀" : "☘️"} <b>{event.pooper}</b>{" "}
                         {description}.
                       </li>
                     );
@@ -350,14 +352,14 @@ export default function HomePage() {
                   if (event.kind === "eviction") {
                     return (
                       <li key={`eviction:${event.name}:${event.timestamp}`}>
-                        👹 {event.name} HAS BEEN REMOVED FROM THE HOUSE OF
-                        FRIENDSHIP.
+                        👹 <b>{event.name}</b> HAS BEEN REMOVED FROM THE HOUSE
+                        OF FRIENDSHIP.
                       </li>
                     );
                   }
                   return (
                     <li key={`induction:${event.name}:${event.timestamp}`}>
-                      🌟 {event.name} HAS BEEN INDUCTED INTO THE HOUSE OF
+                      🌟 <b>{event.name}</b> HAS BEEN INDUCTED INTO THE HOUSE OF
                       FRIENDSHIP.
                     </li>
                   );

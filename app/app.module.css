@@ -81,6 +81,15 @@
   background-color: var(--gray);
 }
 
+.alreadyInducted {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-style: italic;
+}
+
 .innerContainer .poopImageButton {
   margin-top: 10px;
   background: none;
@@ -109,4 +118,37 @@
 
 .poopLeaderboard {
   margin-top: 10px;
+}
+
+.poll {
+  margin-bottom: 20px;
+}
+
+.pollButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pollResults {
+  margin-top: 10px;
+}
+
+.suggestions {
+  margin-top: 10px;
+}
+
+.innerContainer .upvoteButton {
+  background: none;
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+  padding: 1px 6px;
+  margin-right: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.innerContainer .upvoteButton.upvoted {
+  background-color: var(--foreground);
+  color: var(--background);
 }

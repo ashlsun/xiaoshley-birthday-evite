@@ -94,7 +94,7 @@ export default function HomePage() {
         </div>
 
         <div className={styles.description}>
-          <h3>Why a joint party?</h3>
+          <h3>What?</h3>
           Ashley&apos;s birthday is on November 12th and Xiaoxue&apos;s birthday
           is on November 15th. Ashley felt a little shy to throw a party solo
           and Xiaoxue had the generous idea of doing one together. Friendship is
@@ -149,7 +149,7 @@ export default function HomePage() {
           <h3>Poop</h3>
           <div>Poop as {nameForPooper}:</div>
           <button onClick={poopCallback} className={styles.poopImageButton}>
-            <Image src="/doot.png" width="50" height="50" alt="poop" />
+            <Image src="/poop.webp" width="50" height="50" alt="smiley face" />
           </button>
           <div className={styles.poopLog}>
             <ShowWhenReady

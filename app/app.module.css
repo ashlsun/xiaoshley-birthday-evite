@@ -81,13 +81,13 @@
   background-color: var(--gray);
 }
 
-.innerContainer .dootImageButton {
+.innerContainer .poopImageButton {
   margin-top: 10px;
   background: none;
   background-color: none;
 }
 
-.innerContainer .dootImageButton:hover {
+.innerContainer .poopImageButton:hover {
   transform: scale(1.2) rotate(10deg);
 }
 

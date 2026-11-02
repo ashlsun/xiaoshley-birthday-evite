@@ -283,8 +283,8 @@ export default function HomePage() {
           <h3>Should I bring a gift?</h3>
           Don&apos;t buy us any gifts!!! But we would welcome donations to help
           cover the house cost for our visiting friends (We&apos;ll put up a qr
-          code at the house. Or you can Zelle 9082008977 or Venmo
-          Xiaoxue-Resek). Cards also very appreciated!
+          code at the house. Or you can Zelle: 646-577-9949 or 9082008977, Venmo:
+          Xiaoxue-Resek or AshleySun00). Cards also very appreciated!
         </div>
         <div className={styles.attendees}>
           <h3>Who&apos;s in the house of friendship?</h3>
